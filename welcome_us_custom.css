@@ -1,0 +1,472 @@
+html, body {
+  height: 100%;
+}
+
+
+#cu_home_container * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+#cu_intro, #cu_home_container .cu_panel, #cu_form_info,
+#cu_form_share a.cu_dwnld, #cu_form_entry .cu_msg,
+#cu_year_input {
+  -webkit-backface-visibility: hidden;
+}
+
+
+
+#cu_home_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 49;
+  font-family: quattrocento, serif;
+  color: #fff;
+  background: url('../images/welcome mosaic.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 33, 55, 0.8);
+  z-index: -1;
+  /*  #002137*/
+}
+
+
+#cu_home_container .cu_panel {
+  position: absolute;
+/*  width: 800px;*/
+  min-height: 400px;
+  top: 0;
+/*  left: 50%;*/
+/*  margin-left: -400px;*/
+    width: 100%;
+    left: 0;
+}
+
+
+#cu_home_container .cu_sub_panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  font-size: 14px;
+}
+
+
+#cu_home_container h2 {
+  text-align: center;
+  min-height: 26px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 400;
+  max-width: 700px;
+  display: inline-block;
+}
+
+
+#cu_intro {
+  display: none;
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  height: 60%;
+  top: 15%;
+  text-align: center;
+}
+
+
+#logo-img {
+  max-width: 80%;
+  max-height: 80%;
+  display: inline-block;
+}
+
+
+#cu_intro h2 {
+  position: relative;
+  z-index: 91;
+  width: 100%;
+  margin-top: 25px;
+}
+
+
+#cu_form_wrap {
+  display: none;
+  padding-top: 65px;
+  padding-bottom: 75px;
+  text-align: center;
+  font-size: 0;
+}
+
+
+#cu_form_wrap h2,
+#cu_form_wrap #cu_form_info * {
+  color: #ccf8ff;
+}
+
+
+#cu_form_wrap h2 {
+  font-size: 26px;
+  line-height: 31px;
+}
+
+#cu_form_wrap h2 span {
+  color: #fff;
+  margin-top: 5px;
+  display: block;
+}
+
+
+#cu_form_wrap h3 {
+  font-size: 17px;
+  line-height: 22px;
+  margin-bottom: 25px;
+}
+
+
+#cu_form_wrap p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  color: #eee;
+}
+
+
+#other-year-links span {
+  display: inline-block;
+  margin: 0 15px 2px 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+#other-year-links span:hover {
+  color: #fff !important;
+}
+
+
+#cu_form_wrap .cu_box_wrap {
+  display: inline-block;
+  position: relative;
+  height: 350px;
+  margin-top: 50px;
+}
+
+
+#cu_form_left {
+  border: 3px solid #fff;
+  background: rgba(20, 36, 48, .8);
+  width: 350px;
+  margin-right: 25px;
+  overflow: hidden;
+}
+
+
+#cu_form_right {
+  width: 250px;
+}
+
+
+#cu_form_right .cu_sub_panel {
+  background: rgba(20, 36, 48, .8);
+}
+
+
+#cu_form_info {
+  text-align: left;
+  display: block;
+}
+
+#cu_home_container #cu_form_info {
+  padding-top: 35px;
+}
+
+
+
+#cu_est, #cu_year_input {
+  font-weight: 700;
+}
+
+
+#cu_est {
+  font-size: 120px;
+  line-height: 120px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+
+#cu_year_input {
+  background: transparent;
+  position: relative;
+  width: 295px;
+  height: 130px;
+  font-size: 130px;
+  letter-spacing: -2px;
+  margin-left: 15px;
+  margin-top: 15px;
+  text-align: left;
+  color: #fff;
+  display: block;
+  cursor: auto;
+}
+
+
+#cu_year_input_wrap {
+  position: relative;
+  margin-top: -20px;
+}
+
+#cu_year_input::-webkit-input-placeholder {
+   color: rgba(255, 255, 255, 0.08);
+}
+
+#cu_year_input:-moz-placeholder {
+   color: rgba(255, 255, 255, 0.08);
+}
+
+#cu_year_input::-moz-placeholder {
+   color: rgba(255, 255, 255, 0.08);
+}
+
+#cu_year_input:-ms-input-placeholder {
+   color: rgba(255, 255, 255, 0.08);
+}
+
+
+#cu_form_share {
+  display: none;
+  text-align: left;
+}
+
+
+#cu_form_share h3 {
+  font-size: 15px;
+}
+
+
+#cu_ext_links {
+  text-align: center;
+}
+
+
+#cu_ext_links p {
+  margin-bottom: 5px;
+  padding: 5px 0 0px 1px
+}
+
+
+#cu_ext_links a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin: 0 1px;
+  background-repeat: none;
+  background-position: 50% 50%;
+  background-size: contain;
+  opacity: .8;
+  -webkit-transition: opacity, 0.3s;
+  -moz-transition: opacity, 0.3s;
+  -o-transition: opacity, 0.3s;
+  transition: opacity, 0.3s;
+}
+
+
+#cu_ext_links a:hover {
+  opacity: 1;
+}
+
+
+#cu_ext_links a.facebook  { background-image: url('../images/cu_social_icons/facebook.png'); }
+#cu_ext_links a.twitter   { background-image: url('../images/cu_social_icons/twitter.png'); }
+#cu_ext_links a.instagram { background-image: url('../images/cu_social_icons/instagram.png'); }
+#cu_ext_links a.pinterest { background-image: url('../images/cu_social_icons/pinterest.png'); }
+
+
+
+/*#cu_form_share a.cu_ext_link {
+ color: #fff;
+ display: block;
+ text-align: center;
+ margin-top: 15px;
+}
+*/
+
+#cu_form_share a.cu_dwnld {
+  display: block;
+  text-align: center;
+  background: rgba(238, 238, 238, 0.9);
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: rgb(2, 24, 39);
+  opacity: .5;
+  -webkit-transition: all, 0.3s;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+
+#cu_form_share a.cu_dwnld.enabled {
+  opacity: 1;
+}
+
+#cu_form_share a.cu_dwnld.enabled:hover {
+  background-color: #fff;
+}
+
+
+#cu_share_footer {
+  padding: 0 10px;
+}
+
+#cu_share_footer p {
+  line-height: 16px;
+}
+
+#cu_hashtag {
+  font-size: 16px;
+}
+
+
+#cu_share_social {
+  display: block;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 0;
+}
+
+
+.cu_share_link {
+  display: inline-block;
+  margin: 10px 3px;
+  min-height: 30px;
+  width: 30%;
+  overflow: hidden;
+}
+
+
+#cu_form_entry .cu_msg {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 15px;
+  margin: 0;
+  left: 0;
+  font-size: 12px;
+}
+
+
+#cu_form_error_msg {
+  display: none;
+  color: rgb(228, 107, 107);
+  font-style: italic;
+}
+
+
+
+/* ========== */
+/* = FOOTER = */
+/* ========== */
+#cu_footer {
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+#cu_footer a {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: underline;
+  -webkit-transition: background, 0.3s;
+  -moz-transition: background, 0.3s;
+  -o-transition: background, 0.3s;
+  transition: background, 0.3s;
+  /*  padding: 13px 48px;*/
+  /*  border: 2px solid #fff;*/
+  /*  border-radius: 3px;*/
+  /*  background: rgba(255,255,255, .1);*/
+  /*  margin-right: 15px;*/
+}
+
+
+/*#cu_footer a:hover {
+  background: rgba(255,255,255, .3);
+}
+
+#cu_fb_like_btn {
+  display: inline-block;
+  width: 180px;
+  height: 45px;
+  background: rgba(255,255,255, .3);
+  vertical-align: top;
+}*/
+
+
+#cu_footer_logo {
+  background: red;
+  width: 70px;
+  height: 60px;
+  margin: 0 13px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url('../images/welcome logo white.png') 50% 50% no-repeat;
+  background-size: contain;
+}
+
+
+/* ============== */
+/* = RESPONSIVE = */
+/* ============== */
+@media all and (max-height: 720px) {
+  #cu_footer {
+    margin-top: 50px;
+  }
+}
+
+
+@media all and (max-height: 680px) {
+  #cu_footer {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-height: 640px) {
+
+  #cu_form_wrap {
+    padding-top: 38px;
+  }
+
+  #cu_home_container h2 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  #cu_form_wrap .cu_box_wrap {
+    margin-top: 35px;
+  }
+
+  #cu_footer {
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,175 @@
+<manifest alg="2" build="5" opt="false" iceEnabled="true">
+  <folder name="tablet">
+    <folder name="css">
+      <file name="index.css" crc="193354890" ref="tablet>index"/>
+      <file name="master_a-master.css" crc="4146253677" ref="tablet>index"/>
+    </folder>
+    <file name="index.html" crc="14323320" mt="1400597690464" redirect="true"/>
+  </folder>
+  <folder name="css">
+    <file name="site_global.css" crc="3983832653"/>
+    <file name="index.css" crc="4012588923" ref="index"/>
+    <file name="welcome_us.css" crc="4058993152" ref="welcome.us"/>
+  </folder>
+  <folder name="assets">
+    <file name="welcome.us-logo-smaller" crc="4024428083" mt="1399870898000"/>
+    <file name="welcome.us-logo" crc="109213418" mt="1399871326000"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="3828297711" ref="phone>index:index:tablet>index:welcome.us"/>
+    <file name="museutils.js" crc="3880880085" ref="phone>index:index:tablet>index:welcome.us"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="3899542795" ref="phone>index:index:welcome.us:tablet>index"/>
+    <file name="jquery.tobrowserwidth.js" crc="152985095" ref="phone>index:index:welcome.us:tablet>index"/>
+    <file name="pie.js" crc="4147615982" ref="phone>index:index:welcome.us:tablet>index"/>
+    <file name="webpro.js" crc="33264525" ref="phone>index:index:welcome.us:tablet>index"/>
+    <file name="form_check.php" crc="39676790" ref="phone>index:index:welcome.us:tablet>index"/>
+    <file name="form_throttle.php" crc="4202036461" ref="phone>index:index:welcome.us:tablet>index"/>
+    <file name="form-u1661.php" crc="4205906478" ref="phone>index"/>
+    <file name="jquery.watch.js" crc="4199601726" ref="phone>index:index:tablet>index:welcome.us"/>
+    <file name="museredirect.js" crc="299715755" ref="index"/>
+    <file name="jquery.scrolleffects.js" crc="56249048" ref="index:welcome.us"/>
+    <file name="musewpslideshow.js" crc="272207905" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="jquery.museoverlay.js" crc="466079611" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="touchswipe.js" crc="261777990" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="form-u2184.php" crc="410920984" ref="welcome.us"/>
+    <file name="form-u2447.php" crc="4170609000" ref="welcome.us"/>
+    <file name="form-u2816.php" crc="182248700" ref="index"/>
+    <file name="form-u4838.php" crc="486894503" ref="phone>index"/>
+    <file name="form-u4767.php" crc="244790049" ref="tablet>index"/>
+    <file name="form-u4614.php" crc="4240101736" ref="tablet>index"/>
+    <file name="form-u4809.php" crc="102404621" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="welcome mosaic.jpg" crc="4132327379" ref="phone>index:index:tablet>index"/>
+    <file name="welcome logo white.png" crc="3951956305" ref="phone>index:index:welcome.us:tablet>index"/>
+    <file name="facebook.png" crc="245604713" ref="phone>index:index:tablet>index"/>
+    <file name="u1679-17.png" crc="4277895907" ref="phone>index"/>
+    <file name="u1679-17-r.png" crc="3870122079" ref="phone>index"/>
+    <file name="u1679-17-m.png" crc="432329208" ref="phone>index"/>
+    <file name="u1679-17-fs.png" crc="197612331" ref="phone>index"/>
+    <file name="mark zuckerberg.jpg" crc="3771765852" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="paul wesley.jpg" crc="4117173796" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="joely fisher.jpg" crc="234522869" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="jonathan del arco.jpg" crc="355708682" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="ali noorani.jpg" crc="375682936" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="jamie lee curtis.jpg" crc="3940516721" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="jared leto.jpg" crc="420732431" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="david lubell.jpg" crc="463973963" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="james zogby.jpg" crc="3974578492" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="jose antonio vargas.jpg" crc="511327809" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="kasim reed.jpg" crc="4294579425" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="screen shot 2014-03-26 at 90509 pm copy.jpg" crc="4276196833" ref="index:welcome.us:tablet>index"/>
+    <file name="jared polis.jpg" crc="3804986657" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="joseph crowley.jpg" crc="3854012955" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="linda sanchez.jpg" crc="4189033421" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="tony cardenas.jpg" crc="4091653991" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="dr paul song.jpg" crc="4064663096" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="lorella praeli.jpg" crc="4063080171" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="facebook navy.png" crc="206809379" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="instagram navy.png" crc="4237145111" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="flipboard navy.png" crc="316864503" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="twitter navy.png" crc="4082002570" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="diego garcia.jpg" crc="216206013" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="mariana castro.jpg" crc="131980854" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="rob matei.jpg" crc="94237321" ref="index:phone>index:welcome.us:tablet>index"/>
+    <file name="u2194-17.png" crc="4053936589" ref="welcome.us"/>
+    <file name="u2194-17-r.png" crc="4220504204" ref="welcome.us"/>
+    <file name="u2194-17-m.png" crc="4134127001" ref="welcome.us"/>
+    <file name="u2194-17-fs.png" crc="248056141" ref="welcome.us"/>
+    <file name="simple arrow left4-u2396-fr.png" crc="49008565" ref="welcome.us"/>
+    <file name="simple arrow right4-u2390-fr.png" crc="4021933715" ref="welcome.us"/>
+    <file name="michael bolton.jpg" crc="4223433989" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="jurnee smollett.jpg" crc="3790803998" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="russell simmons.jpg" crc="3918071975" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="aditya agarwal.jpg" crc="303796860" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="david blaine.jpg" crc="4248946767" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="eric garcetti.jpg" crc="3887736959" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="jeff rothschild.jpg" crc="102903037" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="joe lonsdale.jpg" crc="4173362832" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="ron conway.jpg" crc="4144043090" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="aj jacobs.jpg" crc="84174361" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="hadi partovi.jpg" crc="116979529" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="hosain rahman.jpg" crc="4055881009" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="alison pincus.jpg" crc="3988645734" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="angela maria kelley.jpg" crc="4033204758" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="barbara arnwine.jpg" crc="3975703495" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="wendy cervantes.jpg" crc="227213662" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="andre carson.jpg" crc="64501676" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="tulsi gabbard.jpg" crc="76007811" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="tim ryan.jpg" crc="517073187" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="steny hoyer.jpg" crc="3868173557" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="mike honda.jpg" crc="438485177" ref="index:welcome.us:phone>index:tablet>index"/>
+    <file name="u2460-17.png" crc="67333586" ref="welcome.us"/>
+    <file name="u2460-17-r.png" crc="321087526" ref="welcome.us"/>
+    <file name="u2460-17-m.png" crc="3959310488" ref="welcome.us"/>
+    <file name="u2460-17-fs.png" crc="4250778594" ref="welcome.us"/>
+    <file name="welcome mosaic-u2182-fr.jpg" crc="3946110255" ref="welcome.us"/>
+    <file name="blank.gif" crc="4208392903" ref="index"/>
+    <file name="screen shot 2014-03-26 at 90434 pm.jpg" crc="82514741" ref="index:tablet>index"/>
+    <file name="loading.gif" crc="3815509949" ref="index"/>
+    <file name="joe green.jpg" crc="382281061" ref="index:phone>index:tablet>index"/>
+    <file name="dan adler.jpg" crc="3969545843" ref="index:phone>index:tablet>index"/>
+    <file name="tolu olubunmi.jpg" crc="3905359020" ref="index:phone>index:tablet>index"/>
+    <file name="u2822-17.png" crc="67333586" ref="index"/>
+    <file name="u2822-17-r.png" crc="345709974" ref="index"/>
+    <file name="u2822-17-m.png" crc="369866761" ref="index"/>
+    <file name="u2822-17-fs.png" crc="3893641167" ref="index"/>
+    <file name="active voice1.jpg" crc="194006681" ref="phone>index:index:tablet>index"/>
+    <file name="alliance for citizenship.jpg" crc="4236718838" ref="phone>index:index:tablet>index"/>
+    <file name="silicon valley leadership group.jpg" crc="4234079971" ref="phone>index:index:tablet>index"/>
+    <file name="bibles, badges, and business for immigration reform1.jpg" crc="4259197956" ref="phone>index:index:tablet>index"/>
+    <file name="fwd logog.jpg" crc="3989985792" ref="phone>index:index:tablet>index"/>
+    <file name="american immigration council.jpg" crc="4180128547" ref="phone>index:index:tablet>index"/>
+    <file name="girl_forward_logo.png" crc="436689524" ref="phone>index:index:tablet>index"/>
+    <file name="welcoming america logo - jpeg.jpg" crc="496435553" ref="phone>index:index:tablet>index"/>
+    <file name="arab american institute.jpg" crc="3932629580" ref="phone>index:index:tablet>index"/>
+    <file name="wework.jpg" crc="442465895" ref="phone>index:index:tablet>index"/>
+    <file name="nyic.jpg" crc="455041305" ref="phone>index:index:tablet>index"/>
+    <file name="first focus.jpg" crc="3980211165" ref="phone>index:index:tablet>index"/>
+    <file name="lawyer-s committee.jpg" crc="375837215" ref="phone>index:index:tablet>index"/>
+    <file name="i learn america.jpg" crc="3873722569" ref="phone>index:index:tablet>index"/>
+    <file name="courage campaign.jpg" crc="10475212" ref="phone>index:index:tablet>index"/>
+    <file name="define american.jpg" crc="3964572608" ref="phone>index:index:tablet>index"/>
+    <file name="cfy.jpg" crc="4284971998" ref="phone>index:index:tablet>index"/>
+    <file name="global_great_lakes_logotype.jpg" crc="125129915" ref="phone>index:index:tablet>index"/>
+    <file name="renew chicago.jpg" crc="4080371098" ref="phone>index:index:tablet>index"/>
+    <file name="cap 2.jpg" crc="3770660638" ref="phone>index:index:tablet>index"/>
+    <file name="national immigration law center logo.jpg" crc="380871385" ref="phone>index:index:tablet>index"/>
+    <file name="new york public library.jpg" crc="4236371236" ref="phone>index:index:tablet>index"/>
+    <file name="national immigration forum.jpg" crc="128870400" ref="phone>index:index:tablet>index"/>
+    <file name="nac.jpg" crc="3950318798" ref="phone>index:index:tablet>index"/>
+    <file name="mytonomy.jpg" crc="429156211" ref="phone>index:index:tablet>index"/>
+    <file name="atlas diy 1.png" crc="3861855007" ref="phone>index:index:tablet>index"/>
+    <file name="the memorial foundation.jpg" crc="4179741155" ref="phone>index:index:tablet>index"/>
+    <file name="michael broukhim.jpg" crc="27099060" ref="index:phone>index:tablet>index"/>
+    <file name="simple arrow left4.png" crc="24534103" ref="tablet>index"/>
+    <file name="simple arrow right4.png" crc="3909899509" ref="tablet>index"/>
+    <file name="u4857-17.png" crc="425027856" ref="phone>index"/>
+    <file name="u4857-17-r.png" crc="3958793927" ref="phone>index"/>
+    <file name="u4857-17-m.png" crc="343157149" ref="phone>index"/>
+    <file name="u4857-17-fs.png" crc="473873492" ref="phone>index"/>
+    <file name="u4784-17.png" crc="425027856" ref="tablet>index"/>
+    <file name="u4784-17-r.png" crc="3958793927" ref="tablet>index"/>
+    <file name="u4784-17-m.png" crc="343157149" ref="tablet>index"/>
+    <file name="u4784-17-fs.png" crc="473873492" ref="tablet>index"/>
+    <file name="u4638-17.png" crc="67333586" ref="tablet>index"/>
+    <file name="u4638-17-r.png" crc="345709974" ref="tablet>index"/>
+    <file name="u4638-17-m.png" crc="369866761" ref="tablet>index"/>
+    <file name="u4638-17-fs.png" crc="3893641167" ref="tablet>index"/>
+    <file name="u4829-17.png" crc="425027856" ref="index"/>
+    <file name="u4829-17-r.png" crc="4224792506" ref="index"/>
+    <file name="u4829-17-m.png" crc="32353241" ref="index"/>
+    <file name="u4829-17-fs.png" crc="168027937" ref="index"/>
+    <file name="simple arrow left4-u2729-fr.png" crc="49008565" ref="index"/>
+    <file name="simple arrow right4-u2724-fr.png" crc="4021933715" ref="index"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="master_a-master.css" crc="514217055" ref="phone>index"/>
+      <file name="index.css" crc="83666700" ref="phone>index"/>
+    </folder>
+    <file name="index.html" crc="3933253264" mt="1400597690456" redirect="true"/>
+  </folder>
+  <file name="index.html" crc="4139898281" mt="1400598598021" redirect="true"/>
+  <file name="welcome.us.html" crc="288785289" mt="1400594702999" redirect="true"/>
+</manifest>
