@@ -308,3 +308,58 @@
   };
 
 }).call(this);
+(function(d){
+  var js, id = 'facebook-jssdk';
+  if (d.getElementById(id))
+    return;
+  js = d.createElement('script');
+  js.id = id;
+  js.async = true;
+  js.src = '//connect.facebook.net/en_US/all.js';
+  d.getElementsByTagName('head')[0].appendChild(js);
+}(document));
+
+window.fbAsyncInit=function(){
+  FB.init({appId:'538632239579703',cookie:true,status:true});
+};
+
+function share_image(img_url, text) {
+//Check to see if the user has authenticated the App.
+    FB.getLoginStatus(function(response) {
+
+        if (response.status === 'connected') {
+            //If you want the user's Facebook ID or their access token, this is how you get them.
+            var uid = response.authResponse.userID;
+            var access_token = response.authResponse.accessToken;
+
+            do_api_share(access_token, img_url, text);
+
+        } else {
+
+            //If they haven't, call the FB.login method
+            FB.login(function(response) {
+
+                if (response.authResponse) {
+
+                    //If you want the user's Facebook ID or their access token, this is how you get them.
+                    var uid = response.authResponse.userID;
+                    var access_token = response.authResponse.accessToken;
+
+                    do_api_share(access_token, img_url, text);
+                } else {
+                    alert("You must install the application to share your greeting.");
+                }
+            }, {scope: 'publish_stream'});
+        }
+    });
+}
+
+
+function do_api_share(at, img_url, text) {
+
+    FB.api("/me/photos", 'post', { message: text, url: img_url}, function(response) {
+
+        console.log(response);
+
+    });
+}
