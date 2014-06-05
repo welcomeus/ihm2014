@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en">
+  <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="description" content="Welcome.us &#45; The Home of Immigrant Heritage Month"/>
+  <meta name="keywords" content="welcome, immigrant heritage month, fwd.us, welcome.us, joe green, michael broukhim, mark zuckerberg, immigration reform, ihm, june"/>
+  <meta name="generator" content="7.4.30.244"/>
+  <link rel="shortcut icon" href="images/welcome.us---the-home-of-immigrant-heritage-month-favicon.ico?4234040380"/>
+  <title>Welcome.us &#45; The Home of Immigrant Heritage Month</title>
+  <link media="only screen and (max-device-width: 370px)" rel="alternate" href="http://www.welcome.us/phone/index.html"/>
+  <link media="only screen and (max-device-width: 960px)" rel="alternate" href="http://www.welcome.us/tablet/index.html"/>
+  <!-- CSS -->
+    <!--link rel="stylesheet" type="text/css" href="/css/site_global.css?3983832653"/-->
+    <!--link rel="stylesheet" type="text/css" href="/css/index.css?4293717476" id="pagesheet"/-->
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   document.documentElement.className += ' js';
+   var __adobewebfontsappname__ = "muse";
+  </script>
+  <!-- JS includes -->
+  <script type="text/javascript">
+   document.write('\x3Cscript src="' + (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//webfonts.creativecloud.com/raleway:n3:all;quattrocento:n4:all.js" type="text/javascript">\x3C/script>');
+  </script>
+
+  <title>Privacy Policy - Welcome.us</title>
+
+  <style>
+    body {
+      padding: 50px 100px;
+    }
+    .centered_img {
+      text-align: center;
+    }
+    .centered_img img {
+      margin: auto;
+    }
+  </style>
+ </head>
+
+ <body>
+
+<div class="centered_img">
+  <img width="200" src="assets/welcome.us-logo-smaller" />
+</div>
+
+
+    <section class="page-headline row">
+        <div class="large-9 columns large-centered">
+            <h2>Darius Test page</h2>
+        </div>
+    </section>
+
+
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '124295237751512',
+          xfbml      : true,
+          version    : 'v1.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "http://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+function login() {
+  FB.login(function(response) {
+   if (response.authResponse) {
+     console.log('Welcome!  Fetching your information.... ');
+     FB.api('/me', function(response) {
+       console.log('Good to see you, ' + response.name + '.');
+     });
+   } else {
+     console.log('User cancelled login or did not fully authorize.');
+   }
+  }, {scope: 'publish_stream,publish_actions'});
+}
+
+    </script>
+
+<a href="javascript: login();">Login</a>
+
+
+<script>
+function share_image(img_url, text) {
+//Check to see if the user has authenticated the App.
+    FB.getLoginStatus(function(response) {
+
+        if (response.status === 'connected') {
+            //If you want the user's Facebook ID or their access token, this is how you get them.
+            var uid = response.authResponse.userID;
+            var access_token = response.authResponse.accessToken;
+
+            do_api_share(access_token, img_url, text);
+
+        } else {
+
+            //If they haven't, call the FB.login method
+            FB.login(function(response) {
+
+                if (response.authResponse) {
+
+                    //If you want the user's Facebook ID or their access token, this is how you get them.
+                    var uid = response.authResponse.userID;
+                    var access_token = response.authResponse.accessToken;
+
+                    do_api_share(access_token, img_url, text);
+                } else {
+                    alert("You must install the application to share your greeting.");
+                }
+            }, {scope: 'publish_stream'});
+        }
+    });
+}
+
+
+function do_api_share(at, img_url, text) {
+
+    FB.api("/me/photos", 'post', { message: text, url: img_url}, function(response) {
+
+        console.log(response);
+
+    });
+}
+
+//Calling the function
+</script>
+
+<a href="javascript: share_image('http://welcome.us/about/assets/welcome.us-logo-smaller', 'Hi there!');">Post photo</a>
+
+
+  <!-- JS includes -->
+  <script type="text/javascript">
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script type="text/javascript">
+   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script src="scripts/museutils.js?3880880085" type="text/javascript"></script>
+  <script src="scripts/jquery.scrolleffects.js?56249048" type="text/javascript"></script>
+  <script src="scripts/jquery.tobrowserwidth.js?152985095" type="text/javascript"></script>
+  <script src="scripts/jquery.musepolyfill.bgsize.js?3899542795" type="text/javascript"></script>
+  <script src="scripts/webpro.js?33264525" type="text/javascript"></script>
+  <script src="scripts/musewpslideshow.js?272207905" type="text/javascript"></script>
+  <script src="scripts/jquery.museoverlay.js?466079611" type="text/javascript"></script>
+  <script src="scripts/touchswipe.js?261777990" type="text/javascript"></script>
+  <script src="scripts/jquery.watch.js?4199601726" type="text/javascript"></script>
+
+    </body>
+</html>
+
