@@ -270,6 +270,9 @@
     coverUrl = "http://welcome.us/cover/cover_" + year + ".jpg";
     profileUrl = "http://welcome.us/profile/profile_" + year + ".jpg";
     $('#cu_dwnld_cover').attr('href', coverUrl).addClass('enabled');
+    $('#cu_publish_profile').addClass('enabled').click(function() {
+      share_image(profileUrl, "Here's when my family and I were welcomed!");
+    });
     return $('#cu_dwnld_profile').attr('href', profileUrl).addClass('enabled');
   };
 
