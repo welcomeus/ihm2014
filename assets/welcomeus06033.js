@@ -313,6 +313,12 @@
   };
 
 }).call(this);
+
+function isDev() {
+  return document.location.hostname != "welcome.us" && document.location.hostname != "www.welcome.us"
+}
+
+
 (function(d){
   var js, id = 'facebook-jssdk';
   if (d.getElementById(id))
@@ -320,12 +326,13 @@
   js = d.createElement('script');
   js.id = id;
   js.async = true;
-  js.src = '//connect.facebook.net/en_US/all.js';
+  js.src = isDev() ? 'http://connect.facebook.net/en_US/all.js' : '//connect.facebook.net/en_US/all.js';
   d.getElementsByTagName('head')[0].appendChild(js);
 }(document));
 
 window.fbAsyncInit=function(){
-  FB.init({appId:'124295237751512',cookie:true,status:true});
+  var appId = isDev() ? '538632239579703' : '124295237751512';
+  FB.init({appId:appId, cookie:true, status:true});
 };
 
 function share_image(img_url, text) {
