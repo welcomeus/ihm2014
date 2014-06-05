@@ -272,6 +272,8 @@
     $('#cu_dwnld_cover').attr('href', coverUrl).addClass('enabled');
     $('#cu_publish_profile').addClass('enabled').click(function() {
       share_image(profileUrl, "Here's when my family and I were welcomed!");
+      alert("We've just posted the image to your Facebook feed. Now you can make it your profile photo!");
+      return false;
     });
     return $('#cu_dwnld_profile').attr('href', profileUrl).addClass('enabled');
   };
@@ -323,7 +325,7 @@
 }(document));
 
 window.fbAsyncInit=function(){
-  FB.init({appId:'538632239579703',cookie:true,status:true});
+  FB.init({appId:'124295237751512',cookie:true,status:true});
 };
 
 function share_image(img_url, text) {

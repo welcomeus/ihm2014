@@ -379,22 +379,66 @@ body {
 }
 
 
-#cu_form_share a.cu_dwnld {
+#cu_form_share .cu_dwnld {
   display: block;
+  float: left;
+  text-align: center;
+  background: rgba(238, 238, 238, 0.9);
+  height: 40px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  background: #ccc;
+  -webkit-transition: all, 0.3s;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  transition: all, 0.3s;
+  width: 50%;
+}
+
+#cu_form_share .cu_publish {
+  display: block;
+  float: left;
   text-align: center;
   background: rgba(238, 238, 238, 0.9);
   height: 40px;
   line-height: 40px;
   margin-bottom: 10px;
-  text-decoration: none;
-  color: rgb(2, 24, 39);
-  opacity: .5;
+  background: #3B5998;
   -webkit-transition: all, 0.3s;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
+  width: 100%;
 }
 
+.cu_dwnld a {
+  color: rgb(2, 24, 39);
+  text-decoration: none;
+}
+
+.cu_publish a {
+  color: rgb(2, 24, 39);
+  text-decoration: none;
+}
+
+.cu_dwnld a:hover {
+  color: #c00 !important;
+  text-decoration: none;
+}
+
+.cu_publish a:hover {
+  color: #c00 !important;
+  text-decoration: none;
+}
+
+.cu_dwnld a:visited {
+  color: rgb(2, 24, 39);
+}
+
+.cu_publish a:visited {
+  color: rgb(2, 24, 39);
+  text-decoration: none;
+}
 
 #cu_form_share a.cu_dwnld.enabled {
   opacity: 1;
