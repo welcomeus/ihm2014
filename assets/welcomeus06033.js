@@ -374,11 +374,15 @@ function share_image(img_url, text) {
 
 
 function do_api_share(at, img_url, text) {
+  var bottom_bar = $('#bottom_bar')
+  bottom_bar.find('p').css('background-color', '#47A3FF');
+  bottom_bar.find('p').html('Uploading to Facebook....')
   FB.api("/me/photos", 'post', { message: text, url: img_url}, function(response) {
-    alert("We've just posted the image to your Facebook feed. Now you can make it your profile photo!");
+    //alert("We've just posted the image to your Facebook feed. Now you can make it your profile photo!");
     var id = response['id'];
     var post_id = response['post_id'];
     var profile_photo_url = 'https://www.facebook.com/photo.php?fbid=' + id + "&makeprofile=1";
+    bottom_bar.find('p').html('Photo Uploaded! &nbsp; <a href="'+profile_photo_url+'" target="_blank">Make Profile Photo</a>');
   });
 }
 
