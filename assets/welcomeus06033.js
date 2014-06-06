@@ -272,7 +272,6 @@
     $('#cu_dwnld_cover').attr('href', coverUrl).addClass('enabled');
     $('#cu_publish_profile').addClass('enabled').click(function() {
       share_image(profileUrl, "Here's when my family and I were welcomed!");
-      alert("We've just posted the image to your Facebook feed. Now you can make it your profile photo!");
       return false;
     });
     return $('#cu_dwnld_profile').attr('href', profileUrl).addClass('enabled');
@@ -331,15 +330,19 @@ function isDev() {
 }(document));
 
 window.fbAsyncInit=function(){
-  var appId = isDev() ? '538632239579703' : '124295237751512';
+  var appId = isDev() ? '721860751176197' : '124295237751512';
   FB.init({appId:appId, cookie:true, status:true});
 };
 
 function share_image(img_url, text) {
-//Check to see if the user has authenticated the App.
+    if (isDev()) { console.log ('sharing image'); }
+
+    //Check to see if the user has authenticated the App.
     FB.getLoginStatus(function(response) {
+        if (isDev()) { console.log ('got auth response:'+response); }
 
         if (response.status === 'connected') {
+            if (isDev()) { console.log ('connected!'); }
             //If you want the user's Facebook ID or their access token, this is how you get them.
             var uid = response.authResponse.userID;
             var access_token = response.authResponse.accessToken;
@@ -347,18 +350,21 @@ function share_image(img_url, text) {
             do_api_share(access_token, img_url, text);
 
         } else {
+            if (isDev()) { console.log ('NOT connected'); }
 
             //If they haven't, call the FB.login method
             FB.login(function(response) {
+              if (isDev()) { console.log ('logging in...'); }
 
                 if (response.authResponse) {
-
+                  if (isDev()) { console.log ('logged in!?'); }
                     //If you want the user's Facebook ID or their access token, this is how you get them.
                     var uid = response.authResponse.userID;
                     var access_token = response.authResponse.accessToken;
 
                     do_api_share(access_token, img_url, text);
                 } else {
+                    if (isDev()) { console.log ('login failed'); }
                     alert("You must install the application to share your greeting.");
                 }
             }, {scope: 'publish_stream'});
@@ -368,10 +374,18 @@ function share_image(img_url, text) {
 
 
 function do_api_share(at, img_url, text) {
-
-    FB.api("/me/photos", 'post', { message: text, url: img_url}, function(response) {
-
-        console.log(response);
-
-    });
+  FB.api("/me/photos", 'post', { message: text, url: img_url}, function(response) {
+    alert("We've just posted the image to your Facebook feed. Now you can make it your profile photo!");
+    var id = response['id'];
+    var post_id = response['post_id'];
+    var profile_photo_url = 'https://www.facebook.com/photo.php?fbid=' + id + "&makeprofile=1";
+  });
 }
+
+
+
+
+
+
+
+

@@ -392,7 +392,10 @@ body {
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
-  width: 50%;
+  width: 47%;
+}
+#cu_form_share .cu_dwnld.profile {
+  margin-right: 6%;
 }
 
 #cu_form_share .cu_publish {
@@ -411,18 +414,8 @@ body {
   width: 100%;
 }
 
-.cu_dwnld a {
-  color: rgb(2, 24, 39);
-  text-decoration: none;
-}
-
 .cu_publish a {
-  color: rgb(2, 24, 39);
-  text-decoration: none;
-}
-
-.cu_dwnld a:hover {
-  color: #c00 !important;
+  color: white;
   text-decoration: none;
 }
 
@@ -431,12 +424,13 @@ body {
   text-decoration: none;
 }
 
-.cu_dwnld a:visited {
+.cu_dwnld a {
   color: rgb(2, 24, 39);
+  text-decoration: none;
 }
 
-.cu_publish a:visited {
-  color: rgb(2, 24, 39);
+.cu_dwnld a:hover {
+  color: #c00 !important;
   text-decoration: none;
 }
 
