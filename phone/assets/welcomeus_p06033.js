@@ -76,6 +76,10 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
     return $('#cu_download').on('click', 'a.cu_dwnld', function(e) {
       var gaEventName;
       if ($(this).hasClass('enabled')) {
+        if ($(this).hasClass('cu_publish')) {
+          e.preventDefault();
+          publishToFacebook();
+        }
         gaEventName = $(this).attr('data-ga-event');
         return registerGAevent(gaEventName);
       } else {
@@ -83,6 +87,12 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
         return showErrorMessage(true);
       }
     });
+  };
+
+  publishToFacebook = function() {
+    var fbProfileUrl;
+    fbProfileUrl = $("#cu_publish_profile").attr("data-profile-url");
+    return share_image(fbProfileUrl, "Here's when my family and I were welcomed!");
   };
 
   updateDownloadLink = function(valid, year) {
@@ -97,17 +107,16 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
     var coverUrl, profileUrl;
     coverUrl = "http://welcome.us/cover/cover_" + year + ".jpg";
     profileUrl = "http://welcome.us/profile/profile_" + year + ".jpg";
-    updateYearInputField('valid');
-    $('#cu_dwnld_cover').attr('href', coverUrl).addClass('enabled');
-    $('#cu_publish_profile').addClass('enabled').click(function() {
-      share_image(profileUrl, "Here's when my family and I were welcomed!");
-      return false;
-    });
-    return $('#cu_dwnld_profile').attr('href', profileUrl).addClass('enabled');
+    $('#cu_dwnld_cover').attr('href', coverUrl);
+    $('#cu_dwnld_profile').attr('href', profileUrl);
+    $('#cu_publish_profile').attr('data-profile-url', profileUrl);
+    $('#cu_download .cu_dwnld').addClass('enabled');
+    return updateYearInputField('valid');
   };
 
   disableDownloadLinks = function() {
     updateYearInputField(false);
+    $('#cu_publish_profile').attr('data-profile-url', '');
     return $('#cu_download .cu_dwnld').removeClass('enabled').attr('href', '');
   };
 
