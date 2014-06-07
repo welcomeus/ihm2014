@@ -28,7 +28,7 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
 
 // welcome.us
 (function() {
-  var afterAltYearPreviewSelect, bindFormKeyup, completeFormReset, disableDownloadLinks, enableDownloadLinks, getTrimmedValue, hideIntroPanel, initAltYearLinks, initAltYearPreview, initDownloadLinks, initFormReset, initHideIntroPanel, initShowHideIntro, initYearFormField, loadBgImg, registerGAevent, resetBtnForPanel, showDecadePreview, showErrorMessage, showEstPreview, showIntroPanel, showRightSubpanel, showYearForm, uncoverBgImg, updateDownloadLink, updateYearInputField, useJqAnimate, validateYearInput, validateYearRange, valueIsInteger;
+  var afterAltYearPreviewSelect, bindFormKeyup, completeFormReset, disableDownloadLinks, enableDownloadLinks, getTrimmedValue, hideIntroPanel, initAltYearLinks, initAltYearPreview, initDownloadLinks, initFormReset, initHideIntroPanel, initShowHideIntro, initYearFormField, loadBgImg, publishToFacebook, registerGAevent, resetBtnForPanel, showDecadePreview, showErrorMessage, showEstPreview, showIntroPanel, showRightSubpanel, showYearForm, uncoverBgImg, updateDownloadLink, updateYearInputField, useJqAnimate, validateYearInput, validateYearRange, valueIsInteger;
 
   $(function() {
     loadBgImg();
@@ -259,6 +259,10 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
     return $('#cu_form_share').on('click', 'a.cu_dwnld', function(e) {
       var gaEventName;
       if ($(this).hasClass('enabled')) {
+        if ($(this).hasClass('cu_publish')) {
+          e.preventDefault();
+          publishToFacebook();
+        }
         gaEventName = $(this).attr('data-ga-event');
         return registerGAevent(gaEventName);
       } else {
@@ -266,6 +270,12 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
         return showErrorMessage(true);
       }
     });
+  };
+
+  publishToFacebook = function() {
+    var fbProfileUrl;
+    fbProfileUrl = $("#cu_publish_profile").attr("data-profile-url");
+    return share_image(fbProfileUrl, "Here's when my family and I were welcomed!");
   };
 
   updateDownloadLink = function(valid, year) {
@@ -276,17 +286,21 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
     }
   };
 
+
   enableDownloadLinks = function(year) {
     var coverUrl, profileUrl;
     coverUrl = "http://welcome.us/cover/cover_" + year + ".jpg";
     profileUrl = "http://welcome.us/profile/profile_" + year + ".jpg";
+    $('#cu_dwnld_cover').attr('href', coverUrl);
+    $('#cu_dwnld_profile').attr('href', profileUrl);
+    $('#cu_publish_profile').attr('data-profile-url', profileUrl);
     updateYearInputField('valid');
-    $('#cu_dwnld_cover').attr('href', coverUrl).addClass('enabled');
-    return $('#cu_dwnld_profile').attr('href', profileUrl).addClass('enabled');
+    return $('#cu_form_share .cu_dwnld').addClass('enabled');
   };
 
   disableDownloadLinks = function() {
     updateYearInputField(false);
+    $('#cu_publish_profile').attr('data-profile-url', '');
     return $('#cu_form_share .cu_dwnld').removeClass('enabled').attr('href', '');
   };
 
@@ -321,3 +335,78 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
   };
 
 }).call(this);
+
+
+function isDev() {
+  return document.location.hostname != "welcome.us" && document.location.hostname != "www.welcome.us"
+}
+
+
+(function(d){
+  var js, id = 'facebook-jssdk';
+  if (d.getElementById(id))
+    return;
+  js = d.createElement('script');
+  js.id = id;
+  js.async = true;
+  js.src = isDev() ? 'http://connect.facebook.net/en_US/all.js' : '//connect.facebook.net/en_US/all.js';
+  d.getElementsByTagName('head')[0].appendChild(js);
+}(document));
+
+window.fbAsyncInit=function(){
+  var appId = isDev() ? '721860751176197' : '124295237751512';
+  FB.init({appId:appId, cookie:true, status:true});
+};
+
+function share_image(img_url, text) {
+    if (isDev()) { console.log ('sharing image'); }
+
+    //Check to see if the user has authenticated the App.
+    FB.getLoginStatus(function(response) {
+        if (isDev()) { console.log ('got auth response:'+response); }
+
+        if (response.status === 'connected') {
+            if (isDev()) { console.log ('connected!'); }
+            //If you want the user's Facebook ID or their access token, this is how you get them.
+            var uid = response.authResponse.userID;
+            var access_token = response.authResponse.accessToken;
+
+            do_api_share(access_token, img_url, text);
+
+        } else {
+            if (isDev()) { console.log ('NOT connected'); }
+
+            //If they haven't, call the FB.login method
+            FB.login(function(response) {
+              if (isDev()) { console.log ('logging in...'); }
+
+                if (response.authResponse) {
+                  if (isDev()) { console.log ('logged in!?'); }
+                    //If you want the user's Facebook ID or their access token, this is how you get them.
+                    var uid = response.authResponse.userID;
+                    var access_token = response.authResponse.accessToken;
+
+                    do_api_share(access_token, img_url, text);
+                } else {
+                    if (isDev()) { console.log ('login failed'); }
+                    alert("You must install the application to share your greeting.");
+                }
+            }, {scope: 'publish_stream'});
+        }
+    });
+}
+
+
+function do_api_share(at, img_url, text) {
+  var bottom_bar = $('#bottom_bar')
+  bottom_bar.show()
+  bottom_bar.find('p').css('background-color', '#47A3FF');
+  bottom_bar.find('p').html('Uploading to Facebook....')
+  FB.api("/me/photos", 'post', { message: text, url: img_url}, function(response) {
+    //alert("We've just posted the image to your Facebook feed. Now you can make it your profile photo!");
+    var id = response['id'];
+    var post_id = response['post_id'];
+    var profile_photo_url = 'https://www.facebook.com/photo.php?fbid=' + id + "&makeprofile=1";
+    bottom_bar.find('p').html('Photo Uploaded! &nbsp; <a href="'+profile_photo_url+'" target="_blank">Make Profile Photo</a>');
+  });
+}

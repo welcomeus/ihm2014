@@ -270,7 +270,7 @@ body {
 #cu_year_input {
   width: 94%;
   background: rgba(20, 36, 48, .8);
-  box-shadow: rgba(255, 255, 255, .03) 0 0 0 2px;
+  box-shadow: rgba(255, 255, 255, .1) 0 0 0 2px;
 }
 
 
@@ -410,20 +410,43 @@ body {
 }
 
 
-#cu_form_share a.cu_dwnld {
+#cu_dwnld_links {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#cu_form_share .cu_dwnld {
   display: block;
+  float: left;
   text-align: center;
   background: rgba(238, 238, 238, 0.9);
-  height: 40px;
-  line-height: 40px;
-  margin-bottom: 10px;
-  text-decoration: none;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 8px 5px 4px 5px;
+  background: #ccc;
   color: rgb(2, 24, 39);
-  opacity: .5;
-  -webkit-transition: all, 0.3s;
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
+  text-decoration: none;
+  width: 49%;
+  opacity: .7;
+}
+
+
+#cu_form_share .cu_dwnld.cover {
+  float: right;
+}
+
+
+#cu_form_share .cu_publish {
+  display: block;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  margin-bottom: 4px;
+  padding: 0 5px;
+  background: #3B5998;
+  width: 100%;
+  color: #fff;
 }
 
 
@@ -450,6 +473,26 @@ body {
 }
 
 
+#bottom_bar {
+  display: none;
+  margin-top: 30px;
+  color: white;
+  height: 30px;
+  text-align: center;
+}
+
+
+#bottom_bar p {
+  width: 40%;
+  margin: auto;
+  padding: 5px;
+}
+
+
+#bottom_bar a {
+  color: white;
+  text-decoration: underline;
+}
 
 /* ========== */
 /* = FOOTER = */
@@ -547,7 +590,8 @@ body {
 /* =============== */
 /* = TRANSITIONS = */
 /* =============== */
-#cu_ext_links a
+#cu_ext_links a,
+#cu_form_share .cu_dwnld
  {
   -webkit-transition: opacity, 0.3s;
   -moz-transition: opacity, 0.3s;
