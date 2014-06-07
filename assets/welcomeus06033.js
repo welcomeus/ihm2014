@@ -386,6 +386,7 @@ function share_image(img_url, text) {
 
 function do_api_share(at, img_url, text) {
   var bottom_bar = $('#bottom_bar')
+  bottom_bar.show()
   bottom_bar.find('p').css('background-color', '#47A3FF');
   bottom_bar.find('p').html('Uploading to Facebook....')
   FB.api("/me/photos", 'post', { message: text, url: img_url}, function(response) {
