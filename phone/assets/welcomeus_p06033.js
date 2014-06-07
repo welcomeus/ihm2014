@@ -4,7 +4,7 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
 
 // welcome.us
 (function() {
-  var bindFormKeyup, completeFormReset, disableDownloadLinks, enableDownloadLinks, getTrimmedValue, initAltYearLinks, initAltYearPreview, initDownloadLinks, initResetAltYearPreview, loadBgImg, registerGAevent, showDecadePreview, showErrorMessage, showEstPreview, uncoverBgImg, updateDownloadLink, updateYearInputField, validateYearInput, validateYearRange, valueIsInteger;
+  var bindFormKeyup, completeFormReset, disableDownloadLinks, enableDownloadLinks, getTrimmedValue, initAltYearLinks, initAltYearPreview, initDownloadLinks, initResetAltYearPreview, loadBgImg, publishToFacebook, registerGAevent, showDecadePreview, showErrorMessage, showEstPreview, uncoverBgImg, updateDownloadLink, updateYearInputField, validateYearInput, validateYearRange, valueIsInteger;
 
   $(function() {
     loadBgImg();
