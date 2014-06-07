@@ -11,7 +11,7 @@
 
 // welcome.us
 (function() {
-  var afterAltYearPreviewSelect, backButtonForPanel, bindFormKeyup, checkTouchDevice, completeFormReset, disableDownloadLink, enableDownloadLink, getTrimmedValue, hideIntroPanel, initAltYearLinks, initAltYearPreview, initBackButton, initDownloadLinks, initHideIntroPanel, initShowHideIntro, initYearFormField, loadBgImg, registerGAevent, showDecadePreview, showErrorMessage, showEstPreview, showIntroPanel, showRightSubpanel, showYearForm, uncoverBgImg, updateDownloadLink, useJqAnimate, validateYearInput, validateYearRange, valueIsInteger, yearFieldFocus;
+  var afterAltYearPreviewSelect, backButtonForPanel, bindFormKeyup, checkTouchDevice, completeFormReset, disableDownloadLinks, enableDownloadLinks, getTrimmedValue, hideIntroPanel, initAltYearLinks, initAltYearPreview, initBackButton, initDownloadLinks, initHideIntroPanel, initShowHideIntro, initYearFormField, loadBgImg, publishToFacebook, registerGAevent, showDecadePreview, showErrorMessage, showEstPreview, showIntroPanel, showRightSubpanel, showYearForm, uncoverBgImg, updateDownloadLink, useJqAnimate, validateYearInput, validateYearRange, valueIsInteger, yearFieldFocus;
 
   $(function() {
     loadBgImg();
@@ -167,6 +167,7 @@
     $('#cu_year_input').show();
     $('#cu_alt_entry').hide();
     yearFieldFocus();
+    disableDownloadLinks();
     return showErrorMessage(false);
   };
 
@@ -243,10 +244,15 @@
     }
   };
 
+
   initDownloadLinks = function() {
     return $('#cu_form_share').on('click', 'a.cu_dwnld', function(e) {
       var gaEventName;
       if ($(this).hasClass('enabled')) {
+        if ($(this).hasClass('cu_publish')) {
+          e.preventDefault();
+          publishToFacebook();
+        }
         gaEventName = $(this).attr('data-ga-event');
         return registerGAevent(gaEventName);
       } else {
@@ -257,27 +263,32 @@
     });
   };
 
+  publishToFacebook = function() {
+    var fbProfileUrl;
+    fbProfileUrl = $("#cu_publish_profile").attr("data-profile-url");
+    return share_image(fbProfileUrl, "Here's when my family and I were welcomed!");
+  };
+
   updateDownloadLink = function(valid, year) {
     if (valid) {
-      return enableDownloadLink(year);
+      return enableDownloadLinks(year);
     } else {
-      return disableDownloadLink();
+      return disableDownloadLinks();
     }
   };
 
-  enableDownloadLink = function(year) {
+  enableDownloadLinks = function(year) {
     var coverUrl, profileUrl;
     coverUrl = "http://welcome.us/cover/cover_" + year + ".jpg";
     profileUrl = "http://welcome.us/profile/profile_" + year + ".jpg";
-    $('#cu_dwnld_cover').attr('href', coverUrl).addClass('enabled');
-    $('#cu_publish_profile').addClass('enabled').click(function() {
-      share_image(profileUrl, "Here's when my family and I were welcomed!");
-      return false;
-    });
-    return $('#cu_dwnld_profile').attr('href', profileUrl).addClass('enabled');
+    $('#cu_dwnld_cover').attr('href', coverUrl);
+    $('#cu_dwnld_profile').attr('href', profileUrl);
+    $('#cu_publish_profile').attr('data-profile-url', profileUrl);
+    return $('#cu_form_share .cu_dwnld').addClass('enabled');
   };
 
-  disableDownloadLink = function() {
+  disableDownloadLinks = function() {
+    $('#cu_publish_profile').attr('data-profile-url', '');
     return $('#cu_form_share .cu_dwnld').removeClass('enabled').attr('href', '');
   };
 
@@ -385,11 +396,3 @@ function do_api_share(at, img_url, text) {
     bottom_bar.find('p').html('Photo Uploaded! &nbsp; <a href="'+profile_photo_url+'" target="_blank">Make Profile Photo</a>');
   });
 }
-
-
-
-
-
-
-
-

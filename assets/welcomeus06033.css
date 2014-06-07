@@ -357,7 +357,7 @@ body {
 
 
 #cu_ext_links p {
-  margin-bottom: 5px;
+  margin: 0;
   padding-top: 2px;
 }
 
@@ -379,61 +379,49 @@ body {
 }
 
 
+#cu_dwnld_links {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
 #cu_form_share .cu_dwnld {
   display: block;
   float: left;
   text-align: center;
   background: rgba(238, 238, 238, 0.9);
-  height: 50px;
-  line-height: 20px;
-  margin-bottom: 10px;
-  padding: 5px;
+  font-size: 13px;
+  line-height: 15px;
+  padding: 8px 5px 4px 5px;
   background: #ccc;
+  color: rgb(2, 24, 39);
+  text-decoration: none;
   -webkit-transition: all, 0.3s;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   transition: all, 0.3s;
-  width: 47%;
+  width: 49%;
+  opacity: .8;
 }
-#cu_form_share .cu_dwnld.profile {
-  margin-right: 6%;
+
+
+#cu_form_share .cu_dwnld.cover {
+  float: right;
 }
+
 
 #cu_form_share .cu_publish {
   display: block;
-  float: left;
   text-align: center;
-  background: rgba(238, 238, 238, 0.9);
   height: 40px;
   line-height: 40px;
-  margin-bottom: 10px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  padding: 0 5px;
   background: #3B5998;
-  -webkit-transition: all, 0.3s;
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
   width: 100%;
+  color: #fff;
 }
 
-.cu_publish a {
-  color: white;
-  text-decoration: none;
-}
-
-.cu_publish a:hover {
-  color: #c00 !important;
-  text-decoration: none;
-}
-
-.cu_dwnld a {
-  color: rgb(2, 24, 39);
-  text-decoration: none;
-}
-
-.cu_dwnld a:hover {
-  color: #c00 !important;
-  text-decoration: none;
-}
 
 #cu_form_share a.cu_dwnld.enabled {
   opacity: 1;
@@ -443,6 +431,13 @@ body {
 #cu_form_share a.cu_dwnld.enabled:hover {
   background-color: #fff;
 }
+
+
+#cu_form_share a.cu_publish.enabled:hover {
+  background: #3B66BB;
+  color: #FF595F;
+}
+
 
 #cu_form_entry .cu_msg {
   position: absolute;
@@ -586,6 +581,11 @@ body {
   -moz-transition: opacity, 0.3s;
   -o-transition: opacity, 0.3s;
   transition: opacity, 0.3s;
+}
+
+
+#cu_form_share .cu_dwnld {
+  -webkit-backface-visibility: hidden;
 }
 
 
