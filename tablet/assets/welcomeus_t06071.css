@@ -421,8 +421,8 @@ body {
   text-align: center;
   background: rgba(238, 238, 238, 0.9);
   font-size: 13px;
-  line-height: 15px;
-  padding: 8px 5px 4px 5px;
+  line-height: 14px;
+  padding: 7px 5px 5px 5px;
   background: #ccc;
   color: rgb(2, 24, 39);
   text-decoration: none;
@@ -603,6 +603,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+#cu_form_share .cu_dwnld {
+  -webkit-backface-visibility: hidden;
+}
 
 #cu_intro h1, .cu_msg {
   -webkit-backface-visibility: hidden;
